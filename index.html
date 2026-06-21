@@ -108,10 +108,12 @@
   }
 
   .rule {
+    margin-bottom: 16px;
+  }
+
+  .rule-top {
     display: flex;
-    align-items: baseline;
     gap: 10px;
-    margin-bottom: 10px;
   }
 
   .rule .num {
@@ -126,25 +128,15 @@
   }
 
   .rule .penalty {
+    display: block;
+    margin-left: 30px;
+    margin-top: 2px;
     color: var(--label);
-    text-align: right;
-    white-space: nowrap;
     font-size: 12px;
   }
 
   .rule .penalty.severe {
     color: var(--accent);
-  }
-
-  @media (max-width: 420px) {
-    .rule {
-      flex-wrap: wrap;
-    }
-    .rule .penalty {
-      width: 100%;
-      text-align: left;
-      margin-left: 30px;
-    }
   }
 
   @media (prefers-color-scheme: light) {
@@ -168,18 +160,60 @@
   <div class="block">
     <div class="block-label">нарушения</div>
 
-    <div class="rule"><span class="num">01</span><span class="action">оскорбления администрации</span><span class="penalty">мут 15м</span></div>
-    <div class="rule"><span class="num">02</span><span class="action">оскорбления людей, наций, искажение истории</span><span class="penalty severe">от мута до блокировки</span></div>
-    <div class="rule"><span class="num">03</span><span class="action">спам</span><span class="penalty">мут 30м</span></div>
-    <div class="rule"><span class="num">04</span><span class="action">политика</span><span class="penalty">мут 6ч</span></div>
-    <div class="rule"><span class="num">05</span><span class="action">попрошайничество</span><span class="penalty">мут 30м</span></div>
-    <div class="rule"><span class="num">06</span><span class="action">реклама</span><span class="penalty">мут 1 день</span></div>
-    <div class="rule"><span class="num">07</span><span class="action">слив личных данных</span><span class="penalty">мут 1 день</span></div>
-    <div class="rule"><span class="num">08</span><span class="action">треш-контент (насилие, непристойности)</span><span class="penalty severe">блокировка</span></div>
-    <div class="rule"><span class="num">09</span><span class="action">споры дольше 10 мин</span><span class="penalty">мут 1ч (в лс)</span></div>
-    <div class="rule"><span class="num">10</span><span class="action">свастика и запрещённая символика</span><span class="penalty">мут 3 дня</span></div>
-    <div class="rule"><span class="num">11</span><span class="action">твинки для обхода</span><span class="penalty severe">блокировка</span></div>
-    <div class="rule"><span class="num">12</span><span class="action">краш-стикеры</span><span class="penalty">мут 6ч</span></div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">01</span><span class="action">оскорбления администрации</span></div>
+      <span class="penalty">мут 1ч</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">02</span><span class="action">оскорбления людей</span></div>
+      <span class="penalty">мут 1 день</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">03</span><span class="action">межнациональная ненависть, искажение истории</span></div>
+      <span class="penalty severe">блокировка</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">04</span><span class="action">спам</span></div>
+      <span class="penalty">мут 30м</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">05</span><span class="action">политика</span></div>
+      <span class="penalty">мут 6ч</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">06</span><span class="action">попрошайничество</span></div>
+      <span class="penalty">мут 30м</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">07</span><span class="action">реклама</span></div>
+      <span class="penalty">мут 1 день</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">08</span><span class="action">слив личных данных</span></div>
+      <span class="penalty severe">блокировка</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">09</span><span class="action">треш-контент (насилие, непристойности)</span></div>
+      <span class="penalty severe">блокировка</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">10</span><span class="action">споры дольше 10 мин</span></div>
+      <span class="penalty">мут 1ч (переносите в лс)</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">11</span><span class="action">свастика и запрещённая символика</span></div>
+      <span class="penalty severe">блокировка</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">12</span><span class="action">твинки для обхода</span></div>
+      <span class="penalty severe">блокировка</span>
+    </div>
+    <div class="rule">
+      <div class="rule-top"><span class="num">13</span><span class="action">краш-стикеры</span></div>
+      <span class="penalty">мут 30м</span>
+    </div>
+
+    <p class="sublabel">повторное нарушение в течение суток — следующая по тяжести санкция.</p>
   </div>
 
   <div class="block">
@@ -191,7 +225,7 @@
   </div>
 
   <div class="block">
-    <p class="updated">// updated: 21.06.26</p>
+    <p class="updated">// updated: 21.06.2026</p>
   </div>
 
 </body>
